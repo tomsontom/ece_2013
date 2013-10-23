@@ -1,0 +1,10 @@
+package application
+
+import org.eclipse.fx.ui.mobile.Deck
+import application.MainPageController
+
+component MainPage controlledby MainPageController {
+	Deck {
+		//TODO Add Nodes
+	}
+}

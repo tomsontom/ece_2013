@@ -1,0 +1,63 @@
+/* Main CSS-File */
+.MWindow {
+	-fx-background-image: url("../icons/grey_wash_wall.png") 
+}
+
+.header {
+	-fx-font-weight: bold;
+	-fx-font-size: 50pt;
+	-fx-fill: white;
+}
+
+.item {
+	-fx-font-weight: bold;
+	-fx-font-size: 20pt;
+	-fx-text-fill: white;
+}
+
+.contentArea {
+	-fx-background-color: rgba(0,0,0,0.3);
+	-fx-background-radius: 20px;
+}
+
+.MPartSashContainer {
+	-fx-background-color: transparent;
+}
+
+.MPartSashContainer > .split-pane-divider {
+	-fx-background-color: transparent;
+}
+
+.viewContent {
+	-fx-background-color: rgba(0,0,0,0.3);
+	-fx-background-radius: 5px;
+	-fx-padding: 15px;
+}
+
+.viewContent > * > .label {
+	-fx-text-fill: white;
+}
+
+.MPart {
+	-fx-padding: 10px;
+}
+
+.perspectiveHeader {
+	-fx-font-weight: bold;
+	-fx-font-size: 30pt;
+	-fx-text-fill: white;
+}
+
+.navigationContent {
+	-fx-background-color: rgba(0,0,0,0.3);
+	-fx-background-radius: 10px;
+	-fx-padding: 10px;
+}
+
+.navigationContent .label {
+	-fx-text-fill: white;
+}
+
+.tab-header-background {
+	-fx-opacity: 0.0;
+}

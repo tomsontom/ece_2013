@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/at.bestsolution.myfond.model/src" modelPluginID="at.bestsolution.myfond.model"
+    modelName="MyFond" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>MyFond.ecore</foreignModel>
+  <genPackages prefix="Myfond" basePackage="at.bestsolution.myfond.model" disposableProviderFactory="true"
+      ecorePackage="MyFond.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyFond.ecore#//Risk">
+      <genEnumLiterals ecoreEnumLiteral="MyFond.ecore#//Risk/R1"/>
+      <genEnumLiterals ecoreEnumLiteral="MyFond.ecore#//Risk/R2"/>
+      <genEnumLiterals ecoreEnumLiteral="MyFond.ecore#//Risk/R3"/>
+      <genEnumLiterals ecoreEnumLiteral="MyFond.ecore#//Risk/R4"/>
+      <genEnumLiterals ecoreEnumLiteral="MyFond.ecore#//Risk/R5"/>
+      <genEnumLiterals ecoreEnumLiteral="MyFond.ecore#//Risk/R6"/>
+      <genEnumLiterals ecoreEnumLiteral="MyFond.ecore#//Risk/R7"/>
+    </genEnums>
+    <genClasses ecoreClass="MyFond.ecore#//MyFond">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//MyFond/currencyList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//MyFond/fondList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//MyFond/assetList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//MyFond/countryList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//MyFond/sectorList"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//Fond">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//Fond/currencyDistributionList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//Fond/assetDistributionList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//Fond/countryDistributionList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyFond.ecore#//Fond/sectorDistributionList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyFond.ecore#//Fond/currency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/assetBasedFee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/managementFee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/risk"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/targetDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Fond/advicedMinHold"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//CurrencyDistribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//CurrencyDistribution/percentage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyFond.ecore#//CurrencyDistribution/currency"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//Currency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Currency/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Currency/symbol"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//AssetDistribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//AssetDistribution/percentage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyFond.ecore#//AssetDistribution/asset"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//Asset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Asset/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//CountryDistribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//CountryDistribution/percentage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyFond.ecore#//CountryDistribution/country"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//Country">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Country/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//SectorDistribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//SectorDistribution/percentage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyFond.ecore#//SectorDistribution/sector"/>
+    </genClasses>
+    <genClasses ecoreClass="MyFond.ecore#//Sector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyFond.ecore#//Sector/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

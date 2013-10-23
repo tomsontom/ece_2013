@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="myfond" nsURI="http://www.bestsolution.at/myfond" nsPrefix="myfond">
+  <eClassifiers xsi:type="ecore:EClass" name="MyFond">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currencyList" upperBound="-1"
+        eType="#//Currency" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fondList" upperBound="-1"
+        eType="#//Fond" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assetList" upperBound="-1"
+        eType="#//Asset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="countryList" upperBound="-1"
+        eType="#//Country" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sectorList" upperBound="-1"
+        eType="#//Sector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fond">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currencyDistributionList"
+        upperBound="-1" eType="#//CurrencyDistribution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assetDistributionList"
+        upperBound="-1" eType="#//AssetDistribution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="countryDistributionList"
+        upperBound="-1" eType="#//CountryDistribution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sectorDistributionList"
+        upperBound="-1" eType="#//SectorDistribution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currency" eType="#//Currency"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="assetBasedFee" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="managementFee" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="risk" eType="#//Risk"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetDefinition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="advicedMinHold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CurrencyDistribution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currency" eType="#//Currency"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Currency">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssetDistribution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asset" eType="#//Asset"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Asset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CountryDistribution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Country">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SectorDistribution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sector" eType="#//Sector"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sector">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Risk">
+    <eLiterals name="R1" value="1"/>
+    <eLiterals name="R2" value="2"/>
+    <eLiterals name="R3" value="3"/>
+    <eLiterals name="R4" value="4"/>
+    <eLiterals name="R5" value="5"/>
+    <eLiterals name="R6" value="6"/>
+    <eLiterals name="R7" value="7"/>
+  </eClassifiers>
+</ecore:EPackage>
