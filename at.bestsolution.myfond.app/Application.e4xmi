@@ -3,21 +3,21 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_SSDyoDvxEeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.trimmedwindow.0" x="0" y="0" width="1000" height="800">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_d5XM8DvxEeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.perspectivestack.0">
       <children xsi:type="advanced:Perspective" xmi:id="_eLgs4DvxEeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.perspective.main">
-        <children xsi:type="basic:Part" xmi:id="_S3zSEDvzEeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.0" contributionURI="bundleclass://at.bestsolution.myfond.ui/at.bestsolution.myfond.ui.main.MainScreen"/>
+        <children xsi:type="basic:Part" xmi:id="_S3zSEDvzEeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.0" contributionURI="bundleclass://at.bestsolution.myfond.app/at.bestsolution.myfond.app.ui.MainScreen"/>
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_zKogQDvzEeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.perspective.fonds">
         <children xsi:type="basic:PartSashContainer" xmi:id="_BOakEDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.partsashcontainer.0">
           <tags>fx_fixedLayout</tags>
-          <children xsi:type="basic:Part" xmi:id="_Dp5vEDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.1">
+          <children xsi:type="basic:Part" xmi:id="_Dp5vEDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.1" contributionURI="bundleclass://at.bestsolution.myfond.ui/at.bestsolution.myfond.ui.fonds.FondHeader">
             <persistedState key="fx_layout_height" value="70"/>
           </children>
           <children xsi:type="basic:PartSashContainer" xmi:id="_FCQCEDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.partsashcontainer.1" horizontal="true">
             <persistedState key="fx_layout_grab_vertical" value="true"/>
             <persistedState key="fx_layout_grab_horizontal" value="true"/>
-            <children xsi:type="basic:Part" xmi:id="_Y0s44Dv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.3" containerData="0.2" contributionURI="bundleclass://at.bestsolution.myfond.ui/at.bestsolution.myfond.ui.fonds.FondList"/>
-            <children xsi:type="basic:Part" xmi:id="_aawQsDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.4" containerData="0.8" contributionURI="bundleclass://at.bestsolution.myfond.ui/at.bestsolution.myfond.ui.fonds.FondDetail"/>
+            <children xsi:type="basic:Part" xmi:id="_Y0s44Dv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.3" containerData="0.3" contributionURI="bundleclass://at.bestsolution.myfond.ui/at.bestsolution.myfond.ui.fonds.FondList"/>
+            <children xsi:type="basic:Part" xmi:id="_aawQsDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.4" containerData="0.7" contributionURI="bundleclass://at.bestsolution.myfond.ui/at.bestsolution.myfond.ui.fonds.FondDetail"/>
           </children>
-          <children xsi:type="basic:Part" xmi:id="_HP6zgDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.2">
+          <children xsi:type="basic:Part" xmi:id="_HP6zgDv0EeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.part.2" contributionURI="bundleclass://at.bestsolution.myfond.app/at.bestsolution.myfond.app.ui.NavigationView">
             <persistedState key="fx_layout_height" value="60"/>
           </children>
         </children>

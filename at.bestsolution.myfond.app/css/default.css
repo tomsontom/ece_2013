@@ -34,8 +34,9 @@
 	-fx-padding: 15px;
 }
 
-.viewContent > * > .label {
+.detail-label {
 	-fx-text-fill: white;
+	-fx-padding: 5 0.0 0.0 0.0;
 }
 
 .MPart {
@@ -60,4 +61,8 @@
 
 .tab-header-background {
 	-fx-opacity: 0.0;
+}
+
+.number-col {
+	-fx-alignment: center-right;
 }
