@@ -1,0 +1,133 @@
+package at.bestsolution.myfond.ui.fonds
+
+import javafx.scene.layout.VBox
+import javafx.scene.control.Button
+import javafx.scene.control.TabPane
+import javafx.scene.control.Tab
+import javafx.scene.layout.GridPane
+import javafx.scene.control.Label
+import javafx.scene.control.TextField
+import javafx.scene.control.ComboBox
+import javafx.scene.control.DatePicker
+import javafx.geometry.Insets
+import javafx.scene.control.TextArea
+import at.bestsolution.myfond.ui.fonds.controllers.FondDetailController
+
+component FondDetailUI controlledby FondDetailController {
+	 GridPane {
+	 	hgap : 10,
+	 	Label {
+	 		text : "Name",
+	 		styleClass : ["detail-label"]
+	 	},
+	 	TextField id name {
+	 		static rowIndex : 1,
+	 		static valignment : "TOP",
+	 		static hgrow : "ALWAYS",
+	 		static columnSpan : 2
+	 	},
+	 	Label {
+	 		text : "Id",
+	 		styleClass : ["detail-label"],
+	 		static rowIndex : 2
+	 	},
+	 	TextField id ^id {
+	 		static rowIndex : 3,
+	 		static valignment : "TOP",
+	 		static fillWidth : false
+	 	},
+	 	Label {
+	 		text : "Description",
+	 		styleClass : ["detail-label"],
+	 		static rowIndex : 2,
+	 		static columnIndex : 1
+	 	},
+	 	TextArea id description {
+	 		prefWidth : 400,
+	 		wrapText : true,
+	 		static rowIndex : 3,
+	 		static columnIndex : 1,
+	 		static rowSpan : 11,
+	 		static valignment : "TOP",
+	 		static hgrow : "ALWAYS"
+	 	},
+	 	Label {
+	 		text : "Asset fee",
+	 		styleClass : ["detail-label"],
+	 		static rowIndex : 4,
+	 		static valignment : "TOP"
+	 	},
+	 	TextField id assetFee {
+	 		static rowIndex : 5,
+	 		static valignment : "TOP",
+	 		static fillWidth : false
+	 	},
+	 	Label {
+	 		text : "Management fee",
+	 		styleClass : ["detail-label"],
+	 		static rowIndex : 6,
+	 		static valignment : "TOP"
+	 	},
+	 	TextField id managementFee {
+	 		static rowIndex : 7,
+	 		static valignment : "TOP",
+	 		static fillWidth : false
+	 	},
+	 	Label {
+	 		text : "Start Date",
+	 		styleClass : ["detail-label"],
+	 		static rowIndex : 8,
+	 		static valignment : "TOP"
+	 	},
+	 	DatePicker id startDate {
+	 		static rowIndex : 9,
+	 		static valignment : "TOP"
+	 	},
+	 	Label {
+	 		text : "Currency",
+	 		styleClass : ["detail-label"],
+	 		static rowIndex : 10
+	 	},
+	 	ComboBox id currency {
+	 		editable : false,
+	 		static rowIndex : 11
+	 	},
+	 	Label {
+	 		text : "Risk",
+	 		styleClass : ["detail-label"],
+	 		static rowIndex : 12
+	 	},
+	 	ComboBox id risk {
+	 		editable : false,
+	 		static rowIndex : 13
+	 	},
+	 	TabPane {
+	 		static rowIndex : 14,
+	 		static columnSpan : 2,
+	 		static hgrow : "ALWAYS",
+	 		static vgrow : "ALWAYS",
+	 		static margin : Insets {
+	 			top : 10
+	 		},
+			tabs : [
+		 		Tab {
+		 			text : "Currency",
+		 			closable : false,
+		 			content : include at.bestsolution.myfond.ui.fonds.CurrencyDetail
+		 		},
+		 		Tab {
+		 			text : "Assets",
+		 			closable : false
+		 		},
+		 		Tab {
+		 			text : "Country",
+		 			closable : false
+		 		},
+		 		Tab {
+		 			text : "Sector",
+		 			closable : false
+		 		}
+		 	]
+		}
+	}
+}
