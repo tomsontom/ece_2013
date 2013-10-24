@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ASCII"?>
+<myfond:MyFond
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:myfond="http://www.bestsolution.at/myfond"
+    xsi:schemaLocation="http://www.bestsolution.at/myfond ../at.bestsolution.myfond.model/model/MyFond.ecore">
+  <currencyList
+      name="US Dollar"
+      symbol="USD"/>
+  <currencyList
+      name="Honkong Dollar"
+      symbol="HKD"/>
+  <currencyList
+      name="Indian Rupee"
+      symbol="INR"/>
+  <currencyList
+      name="Malaysian Ringgit"
+      symbol="MYR"/>
+  <currencyList
+      name="Thai Baht"
+      symbol="THB"/>
+  <currencyList
+      name="Turkish Lira"
+      symbol="TRY"/>
+  <currencyList
+      name="Others"
+      symbol="Others"/>
+  <currencyList
+      name="Euro"
+      symbol="EUR"/>
+  <currencyList
+      name="British Pounds"
+      symbol="GBP"/>
+  <currencyList
+      name="Swiss Franc"
+      symbol="CHF"/>
+  <currencyList
+      name="Danish Crowns"
+      symbol="DKK"/>
+  <currencyList
+      name="Norway Crowns"
+      symbol="NOR"/>
+  <currencyList
+      name="Swedish Crowns"
+      symbol="SEK"/>
+  <fondList
+      name="Raiffeisen-Eurasien-Aktien"
+      id="AT0000745856"
+      currency="//@currencyList.7"
+      startDate="2000-05-02T00:00:00.000+0200"
+      assetBasedFee="5.0"
+      managementFee="2.0"
+      risk="R7"
+      targetDefinition="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum eros neque, eu convallis tortor tempus eu. Duis id tempus tellus. Quisque nulla elit, aliquam et urna ac, tincidunt fringilla elit. Ut quis sagittis lectus. Etiam venenatis, lacus sit amet iaculis posuere, eros lorem aliquam tellus, id fringilla risus erat vel ipsum. Donec a fringilla lacus, sit amet tempor erat. Sed sapien dui, malesuada eu diam quis, interdum egestas ligula. Etiam posuere quis nibh id pretium. "
+      advicedMinHold="10">
+    <currencyDistributionList
+        percentage="23.81"
+        currency="//@currencyList.0"/>
+    <currencyDistributionList
+        percentage="23.49"
+        currency="//@currencyList.1"/>
+    <currencyDistributionList
+        percentage="21.2"
+        currency="//@currencyList.2"/>
+    <currencyDistributionList
+        percentage="9.1"
+        currency="//@currencyList.3"/>
+    <currencyDistributionList
+        percentage="7.4"
+        currency="//@currencyList.4"/>
+    <currencyDistributionList
+        percentage="4.8"
+        currency="//@currencyList.5"/>
+    <currencyDistributionList
+        percentage="10.2"
+        currency="//@currencyList.6"/>
+    <assetDistributionList
+        percentage="89.5"
+        asset="//@assetList.0"/>
+    <assetDistributionList
+        percentage="2.1"
+        asset="//@assetList.2"/>
+    <assetDistributionList
+        percentage="8.4"
+        asset="//@assetList.3"/>
+    <countryDistributionList
+        percentage="23.2"
+        country="//@countryList.0"/>
+    <countryDistributionList
+        percentage="22.2"
+        country="//@countryList.1"/>
+    <countryDistributionList
+        percentage="12.9"
+        country="//@countryList.2"/>
+    <countryDistributionList
+        percentage="8.6"
+        country="//@countryList.4"/>
+    <countryDistributionList
+        percentage="7.6"
+        country="//@countryList.5"/>
+    <countryDistributionList
+        percentage="16.2"
+        country="//@countryList.6"/>
+    <sectorDistributionList
+        percentage="27.8"
+        sector="//@sectorList.0"/>
+    <sectorDistributionList
+        percentage="17.6"
+        sector="//@sectorList.1"/>
+    <sectorDistributionList
+        percentage="10.1"
+        sector="//@sectorList.2"/>
+    <sectorDistributionList
+        percentage="8.7"
+        sector="//@sectorList.3"/>
+    <sectorDistributionList
+        percentage="7.4"
+        sector="//@sectorList.4"/>
+    <sectorDistributionList
+        percentage="7.1"
+        sector="//@sectorList.5"/>
+    <sectorDistributionList
+        percentage="21.2"
+        sector="//@sectorList.6"/>
+  </fondList>
+  <fondList
+      name="Raiffeisen-Europa-Aktien"
+      id="AT0000986377"
+      currency="//@currencyList.7"
+      startDate="1996-07-16T00:00:00.000+0200"
+      assetBasedFee="4.0"
+      managementFee="1.5"
+      risk="R6"
+      targetDefinition="Duis egestas lacus quam, facilisis dapibus magna porttitor vitae. Donec sed tristique metus. Nulla facilisi. Aliquam quis iaculis augue, a dictum arcu. Mauris quis auctor erat. Nunc mollis non orci id sagittis. Praesent pulvinar venenatis nisl at ultrices. Etiam pulvinar magna at nibh mattis interdum. Pellentesque interdum justo mauris, id condimentum magna dignissim id. Mauris vulputate eleifend quam et suscipit. Morbi cursus pulvinar tellus, sit amet hendrerit justo malesuada at. Ut cursus sodales tristique. Quisque id pulvinar ligula, id condimentum sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "
+      advicedMinHold="10">
+    <currencyDistributionList
+        percentage="54.7"
+        currency="//@currencyList.7"/>
+    <currencyDistributionList
+        percentage="25.5"
+        currency="//@currencyList.8"/>
+    <currencyDistributionList
+        percentage="8.5"
+        currency="//@currencyList.9"/>
+    <currencyDistributionList
+        percentage="4.8"
+        currency="//@currencyList.10"/>
+    <currencyDistributionList
+        percentage="4.4"
+        currency="//@currencyList.11"/>
+    <currencyDistributionList
+        percentage="2.1"
+        currency="//@currencyList.12"/>
+    <assetDistributionList
+        percentage="95.1"
+        asset="//@assetList.0"/>
+    <assetDistributionList
+        percentage="0.5"
+        asset="//@assetList.2"/>
+    <assetDistributionList
+        percentage="4.4"
+        asset="//@assetList.3"/>
+  </fondList>
+  <assetList
+      name="Share"/>
+  <assetList
+      name="Loan"/>
+  <assetList
+      name="Bank deposit"/>
+  <assetList
+      name="Others"/>
+  <countryList
+      name="India"/>
+  <countryList
+      name="Russia"/>
+  <countryList
+      name="China"/>
+  <countryList
+      name="Malaysia"/>
+  <countryList
+      name="Bank"/>
+  <countryList
+      name="Thailand"/>
+  <countryList
+      name="Others"/>
+  <sectorList
+      name="Finance"/>
+  <sectorList
+      name="Energy"/>
+  <sectorList
+      name="Basic goods"/>
+  <sectorList
+      name="Bank deposit"/>
+  <sectorList
+      name="Industry"/>
+  <sectorList
+      name="Not basic goods"/>
+  <sectorList
+      name="Others"/>
+</myfond:MyFond>
