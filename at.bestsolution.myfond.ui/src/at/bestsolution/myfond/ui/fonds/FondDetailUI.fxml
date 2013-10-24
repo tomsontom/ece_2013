@@ -13,6 +13,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.GridPane?>
+<?scenebuilder-stylesheet platform:/resource/at.bestsolution.myfond.app/css/default.css?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="at.bestsolution.myfond.ui.fonds.controllers.FondDetailController" hgap="10">
 

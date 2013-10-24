@@ -13,7 +13,7 @@ import javafx.geometry.Insets
 import javafx.scene.control.TextArea
 import at.bestsolution.myfond.ui.fonds.controllers.FondDetailController
 
-component FondDetailUI controlledby FondDetailController {
+component FondDetailUI controlledby FondDetailController styledwith "platform:/resource/at.bestsolution.myfond.app/css/default.css" {
 	 GridPane {
 	 	hgap : 10,
 	 	Label {

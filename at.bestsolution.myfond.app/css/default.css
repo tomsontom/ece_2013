@@ -66,3 +66,29 @@
 .number-col {
 	-fx-alignment: center-right;
 }
+
+.toolbutton {
+	-fx-background-color: transparent;
+}
+
+.toolbutton:hover {
+	-fx-background-color: rgba(0,0,0,0.3);
+}
+
+ .toolbutton.add {
+	-fx-graphic: url("../icons/list-add.png");
+}
+
+.toolbutton.remove {
+	-fx-graphic: url("../icons/list-remove.png");
+}
+
+.toolbutton.edit {
+	-fx-graphic: url("../icons/configure.png");
+}
+
+.popupArea {
+	-fx-background-color: rgba(0,0,0,0.8);
+	-fx-background-radius: 10px;
+	-fx-padding: 20px;
+}

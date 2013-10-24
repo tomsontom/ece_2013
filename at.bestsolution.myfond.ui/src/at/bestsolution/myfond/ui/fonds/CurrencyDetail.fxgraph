@@ -5,8 +5,14 @@ import javafx.scene.control.TableView
 import javafx.scene.control.TableColumn
 import at.bestsolution.myfond.ui.fonds.controllers.CurrencyController
 import javafx.scene.layout.VBox
+import javafx.scene.layout.Region
+import javafx.scene.control.Label
+import javafx.scene.image.ImageView
+import javafx.scene.image.Image
+import javafx.geometry.Insets
+import javafx.scene.control.Button
 
-component CurrencyDetail controlledby CurrencyController {
+component CurrencyDetail controlledby CurrencyController styledwith "platform:/resource/at.bestsolution.myfond.app/css/default.css" {
 	VBox {
 		TableView id table {
 			prefHeight : 150,
@@ -24,6 +30,32 @@ component CurrencyDetail controlledby CurrencyController {
 				}
 			],
 			static vgrow : "ALWAYS"
+		},
+		HBox {
+			spacing : 5,
+			padding : Insets {
+				top : 10,
+				left : 10,
+				right : 10
+			},
+			Region {
+				static hgrow : "ALWAYS"
+			},
+			Button {
+				styleClass : ["toolbutton","add"],
+				onAction : controllermethod onAddCurrency
+			},
+			Button {
+				styleClass : ["toolbutton","edit"],
+				onAction : controllermethod onEditCurrency
+			},
+			Button {
+				styleClass : ["toolbutton","remove"],
+				onAction : controllermethod onRemoveCurrency
+			},
+			Region {
+				static hgrow : "ALWAYS"
+			}
 		}
 	}
 }
