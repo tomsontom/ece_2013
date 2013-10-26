@@ -2,9 +2,26 @@ package application
 
 import org.eclipse.fx.ui.mobile.Deck
 import application.MainPageController
+import org.eclipse.fx.ui.mobile.Card
+import javafx.scene.control.ListView
+import javafx.scene.control.Label
 
 component MainPage controlledby MainPageController {
 	Deck {
-		//TODO Add Nodes
+		cards : [
+			Card {
+				left : ListView id fondList {
+					
+				},
+				center :  Deck id fondDeck {
+					cards : [
+						Card {
+							name : "main",
+							center : Label {text : "Fondinformations"}
+						}
+					]
+				}
+			}
+		]
 	}
 }

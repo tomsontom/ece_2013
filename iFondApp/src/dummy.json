@@ -1,0 +1,228 @@
+{
+data : [
+	{
+		risk : "R7",
+		id : "AT0000745856",
+		name : "Raiffeisen-Eurasien-Aktien",
+		assetFee : 5.0,
+		managementFee : 2.0,
+		description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum eros neque, eu convallis tortor tempus eu. Duis id tempus tellus. Quisque nulla elit, aliquam et urna ac, tincidunt fringilla elit. Ut quis sagittis lectus. Etiam venenatis, lacus sit amet iaculis posuere, eros lorem aliquam tellus, id fringilla risus erat vel ipsum. Donec a fringilla lacus, sit amet tempor erat. Sed sapien dui, malesuada eu diam quis, interdum egestas ligula. Etiam posuere quis nibh id pretium. ",
+		currencyDistribution : [
+			{
+				name : "USD",
+				value: 23.81
+			},
+			{
+				name : "HKD",
+				value: 23.49
+			},
+			{
+				name : "INR",
+				value: 21.2
+			},
+			{
+				name : "MYR",
+				value: 9.1
+			},
+			{
+				name : "THB",
+				value: 7.4
+			},
+			{
+				name : "TRY",
+				value: 4.8
+			},
+			{
+				name : "Others",
+				value: 10.2
+			}
+		],
+		assetDistribution : [
+			{
+				name : "Shares",
+				value: 89.5
+			},
+			{
+				name : "Bankdeposit",
+				value: 2.1
+			},
+			{
+				name : "Others",
+				value: 8.4
+			}
+		],
+		countryDistribution : [
+			{
+				name : "India",
+				value: 23.0
+			},
+			{
+				name : "Russia",
+				value: 21.8
+			},
+			{
+				name : "China",
+				value: 12.7
+			},
+			{
+				name : "Malaysia",
+				value: 9.4
+			},
+			{
+				name : "Bank",
+				value: 8.0
+			},
+			{
+				name : "Thailand",
+				value: 7.6
+			},
+			{
+				name : "Others",
+				value: 17.5
+			}
+		],
+		sectorDistribution : [
+			{
+				name : "Finance",
+				value: 27.8
+			},
+			{
+				name : "Energy",
+				value: 17.6
+			},
+			{
+				name : "Basic goods",
+				value: 10.1
+			},
+			{
+				name : "Bank deposit",
+				value: 8.7
+			},
+			{
+				name : "Industry",
+				value: 7.4
+			},
+			{
+				name : "Not basic goods",
+				value: 7.1
+			},
+			{
+				name : "Others",
+				value: 21.2
+			}
+		]
+	},
+	{
+		risk : "R6",
+		id : "AT0000986377",
+		name : "Raiffeisen-Europa-Aktien",
+		assetFee : 4.0,
+		managementFee : 1.5,
+		description : "Duis egestas lacus quam, facilisis dapibus magna porttitor vitae. Donec sed tristique metus. Nulla facilisi. Aliquam quis iaculis augue, a dictum arcu. Mauris quis auctor erat. Nunc mollis non orci id sagittis. Praesent pulvinar venenatis nisl at ultrices. Etiam pulvinar magna at nibh mattis interdum. Pellentesque interdum justo mauris, id condimentum magna dignissim id. Mauris vulputate eleifend quam et suscipit. Morbi cursus pulvinar tellus, sit amet hendrerit justo malesuada at. Ut cursus sodales tristique. Quisque id pulvinar ligula, id condimentum sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. ",
+		currencyDistribution : [
+			{
+				name : "EUR",
+				value : 54.7
+			},
+			{
+				name : "GBP",
+				value : 25.5
+			},
+			{
+				name : "CHF",
+				value : 8.5
+			},
+			{
+				name : "DKK",
+				value : 4.8
+			},
+			{
+				name : "SEK",
+				value : 2.1
+			},
+			{
+				name : "SEK",
+				value : 2.1
+			},
+			{
+				name : "Others",
+				value : 0.0
+			}
+		],
+		assetDistribution : [
+			{
+				name : "Shares",
+				value: 95.1
+			},
+			{
+				name : "Bankdeposit",
+				value: 0.5
+			},
+			{
+				name : "Others",
+				value: 4.4
+			}
+		],
+		countryDistribution : [
+			{
+				name : "Great Britain",
+				value: 23.9
+			},
+			{
+				name : "France",
+				value: 10.8
+			},
+			{
+				name : "Germany",
+				value: 9.8
+			},
+			{
+				name : "Finnland",
+				value: 7.2
+			},
+			{
+				name : "Swiss",
+				value: 7.0
+			},
+			{
+				name : "Netherlands",
+				value: 6.9
+			},
+			{
+				name : "Others",
+				value: 34.4
+			}
+		],
+		sectorDistribution : [
+			{
+				name : "Finance",
+				value: 18.1
+			},
+			{
+				name : "Basic goods",
+				value: 13.5
+			},
+			{
+				name : "Industry",
+				value: 12.9
+			},
+			{
+				name : "Energy",
+				value: 11.9
+			},
+			{
+				name : "Not basic goods",
+				value: 11.2
+			},
+			{
+				name : "Healthcare",
+				value: 9.6
+			},
+			{
+				name : "Others",
+				value: 22.8
+			}
+		]
+	}
+]
+}

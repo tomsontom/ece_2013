@@ -4,8 +4,29 @@
 -->
 
 <?import java.lang.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import org.eclipse.fx.ui.mobile.Card?>
 <?import org.eclipse.fx.ui.mobile.Deck?>
 
 <Deck xmlns:fx="http://javafx.com/fxml" fx:controller="application.MainPageController">
 
+	<cards>
+		<Card> 
+			<left>
+				<ListView fx:id="fondList"/> 
+			</left>
+			<center>
+				<Deck fx:id="fondDeck"> 
+					<cards>
+						<Card name="main"> 
+							<center>
+								<Label text="Fondinformations"/> 
+							</center>
+						</Card>
+					</cards>
+				</Deck>
+			</center>
+		</Card>
+	</cards>
 </Deck>

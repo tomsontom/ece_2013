@@ -1,0 +1,178 @@
+package application
+
+import javafx.scene.layout.HBox
+import org.eclipse.fx.ui.mobile.Card
+import javafx.scene.layout.BorderPane
+import javafx.scene.control.TitledPane
+import javafx.scene.text.Text
+import org.eclipse.fx.ui.mobile.Deck
+import javafx.scene.control.Button
+import javafx.scene.layout.Region
+import javafx.scene.layout.GridPane
+import javafx.scene.control.Label
+import application.FondCardController
+import javafx.geometry.Insets
+import javafx.scene.image.ImageView
+import javafx.scene.image.Image
+import javafx.scene.Group
+import javafx.scene.layout.Pane
+import javafx.scene.layout.StackPane
+
+component FondCard controlledby FondCardController {
+	Card {
+		top : TitledPane id fontData {
+			text : "Fond ABC",
+			collapsible : false,
+			content : GridPane {
+				hgap : 10,
+				vgap : 10,
+				Label {
+					text : "Risk:"
+				},
+				Label id risk {
+					text : "xxx",
+					static columnIndex : 1
+				},
+				Label {
+					text : "Asset fee:",
+					static rowIndex : 1
+				},
+				Label id assetFee {
+					text : "x.xx%",
+					static rowIndex : 1,
+					static columnIndex : 1
+				},
+				Label {
+					text : "Management fee:",
+					static rowIndex : 2
+				},
+				Label id managementFee {
+					text : "x.xx%",
+					static rowIndex : 2,
+					static columnIndex : 1
+				},
+				Label {
+					text : "Description:",
+					static rowIndex : 3,
+					static valignment : "TOP"
+				},
+				Text id description {
+					text : "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+					wrappingWidth : 600,
+					static rowIndex : 3,
+					static columnIndex : 1
+				}
+			}
+		},
+		center : Deck id diagrammDeck {
+			cards : [
+				Card id currency {
+					name : "currency",
+					center : TitledPane {
+						text : "Currency",
+						collapsible : false
+					}
+				},
+				Card id asset {
+					name : "asset",
+					center : TitledPane {
+						text : "Asset",
+						collapsible : false
+					}
+				},
+				Card id country {
+					name : "country",
+					center : TitledPane {
+						text : "Country",
+						collapsible : false
+					}
+				},
+				Card id sector {
+					name : "sector",
+					center : TitledPane {
+						text : "Sector",
+						collapsible : false
+					}
+				}
+			]
+		},
+		bottom : HBox {
+			^id : "iphone-toolbar",
+			spacing : 10,
+			padding : Insets {
+				top : 10,
+				bottom : 10
+			},
+			Region {
+				static hgrow : "ALWAYS"
+			},
+			StackPane {
+				^id: "currencyButton",
+				children : [
+					Button {
+						prefHeight : 32,
+						prefWidth : 32,
+						clip : ImageView {
+							image : Image {
+								url : location "money_bag-32.png"
+							}
+						},
+						onAction : controllermethod showCurrency
+					}
+				],
+				onMouseClicked : controllermethod showCurrency
+			},
+			StackPane {
+				^id : "assetButton",
+				children : [
+					Button {
+						prefHeight : 32,
+						prefWidth : 32,
+						clip : ImageView {
+							image : Image {
+								url : location "archive2-32.png"
+							}
+						},
+						onAction : controllermethod showAsset
+					}
+				],
+				onMouseClicked : controllermethod showAsset
+			},
+			StackPane {
+				^id : "countryButton",
+				children : [
+					Button {
+						prefHeight : 32,
+						prefWidth : 32,
+						clip : ImageView {
+							image : Image {
+								url : location "world_map-32.png"
+							}
+						},
+						onAction : controllermethod showCountry
+					}
+				],
+				onMouseClicked : controllermethod showCountry
+			},
+			StackPane {
+				^id : "sectorButton",
+				children : [
+					Button {
+						prefHeight : 32,
+						prefWidth : 32,
+						clip : ImageView {
+							image : Image {
+								url : location "factory-32.png"
+							}
+						},
+						onAction : controllermethod showSector
+					}
+				],
+				onMouseClicked : controllermethod showSector
+			},
+			Region {
+				static hgrow : "ALWAYS"
+			}
+		}
+	}
+}
