@@ -1,0 +1,41 @@
+package at.bestsolution.myfond.ui.fonds
+
+import javafx.scene.layout.VBox
+import javafx.scene.layout.GridPane
+import javafx.scene.control.Label
+import javafx.scene.control.ComboBox
+import javafx.scene.control.TextField
+import javafx.scene.control.Button
+import at.bestsolution.myfond.ui.fonds.controllers.CountryDialogController
+
+component CountryDialog controlledby CountryDialogController {
+	GridPane {
+		styleClass : ["popupArea"],
+		hgap : 10,
+		vgap : 10,
+		Label {
+			text : "Currency",
+			styleClass : ["detail-label"]
+		},
+		ComboBox id currency {
+			static columnIndex : 1
+		},
+		Label {
+			text : "Percentage",
+			static rowIndex : 1,
+			styleClass : ["detail-label"]
+		},
+		TextField id percentage {
+			static rowIndex : 1,
+			static columnIndex : 1,
+			static hgrow : "ALWAYS"
+		},
+		Button {
+			text : "Close",
+			onAction : controllermethod onClose,
+			static rowIndex : 2,
+			static columnIndex : 1,
+			static halignment : "RIGHT"
+		}
+	}
+}

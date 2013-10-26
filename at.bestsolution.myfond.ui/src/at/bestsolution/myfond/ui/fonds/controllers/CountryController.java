@@ -89,7 +89,7 @@ public class CountryController implements Initializable {
 		s.setY(cy-100);
 		
 		try {
-			Parent root = (Parent) factory.loadBundleRelative("/at/bestsolution/myfond/ui/fonds/CurrencyDialog.fxml").load();
+			Parent root = (Parent) factory.loadBundleRelative("/at/bestsolution/myfond/ui/fonds/CountryDialog.fxml").load();
 			Scene sc = new Scene(root,400,-1);
 			sc.setFill(Color.TRANSPARENT);
 			sc.getStylesheets().addAll(window.getScene().getStylesheets());
