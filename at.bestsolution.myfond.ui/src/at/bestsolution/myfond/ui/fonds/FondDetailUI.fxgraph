@@ -117,15 +117,18 @@ component FondDetailUI controlledby FondDetailController styledwith "platform:/r
 		 		},
 		 		Tab {
 		 			text : "Assets",
-		 			closable : false
+		 			closable : false,
+		 			content : include at.bestsolution.myfond.ui.fonds.AssetDetail
 		 		},
 		 		Tab {
 		 			text : "Country",
-		 			closable : false
+		 			closable : false,
+		 			content : include at.bestsolution.myfond.ui.fonds.CountryDetail
 		 		},
 		 		Tab {
 		 			text : "Sector",
-		 			closable : false
+		 			closable : false,
+		 			content : include at.bestsolution.myfond.ui.fonds.SectorDetail
 		 		}
 		 	]
 		}

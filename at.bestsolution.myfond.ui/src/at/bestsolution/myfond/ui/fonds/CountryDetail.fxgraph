@@ -1,0 +1,58 @@
+package at.bestsolution.myfond.ui.fonds
+
+import javafx.scene.layout.VBox
+import at.bestsolution.myfond.ui.fonds.controllers.CountryController
+import javafx.scene.control.TableView
+import javafx.scene.control.TableColumn
+import javafx.scene.layout.HBox
+import javafx.geometry.Insets
+import javafx.scene.layout.Region
+import javafx.scene.control.Button
+
+component CountryDetail controlledby CountryController {
+	VBox {
+		TableView id table {
+			prefHeight : 150,
+			columns : [
+				TableColumn id name {
+					text : "Name",
+					minWidth : 200
+				},
+				TableColumn id value {
+					text : "Percentage",
+					minWidth : 100,
+					styleClass : [
+						"number-col"
+					]
+				}
+			],
+			static vgrow : "ALWAYS"
+		},
+		HBox {
+			spacing : 5,
+			padding : Insets {
+				top : 10,
+				left : 10,
+				right : 10
+			},
+			Region {
+				static hgrow : "ALWAYS"
+			},
+			Button {
+				styleClass : ["toolbutton","add"],
+				onAction : controllermethod onAdd
+			},
+			Button {
+				styleClass : ["toolbutton","edit"],
+				onAction : controllermethod onEdit
+			},
+			Button {
+				styleClass : ["toolbutton","remove"],
+				onAction : controllermethod onRemove
+			},
+			Region {
+				static hgrow : "ALWAYS"
+			}
+		}
+	}
+}

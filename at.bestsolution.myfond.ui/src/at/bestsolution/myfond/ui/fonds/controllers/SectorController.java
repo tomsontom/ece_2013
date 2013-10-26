@@ -1,9 +1,6 @@
 package at.bestsolution.myfond.ui.fonds.controllers;
 
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.CURRENCY_DISTRIBUTION__CURRENCY;
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.CURRENCY_DISTRIBUTION__PERCENTAGE;
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.CURRENCY__NAME;
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.FOND__CURRENCY_DISTRIBUTION_LIST;
+import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,20 +31,20 @@ import org.eclipse.fx.ui.databinding.TableUtil;
 import org.eclipse.fx.ui.di.FXMLLoader;
 import org.eclipse.fx.ui.di.FXMLLoaderFactory;
 
-import at.bestsolution.myfond.model.myfond.CurrencyDistribution;
 import at.bestsolution.myfond.model.myfond.Fond;
 import at.bestsolution.myfond.model.myfond.MyfondFactory;
+import at.bestsolution.myfond.model.myfond.SectorDistribution;
 
-public class CurrencyController implements Initializable {
+public class SectorController implements Initializable {
 	private WritableValue master = new WritableValue();
 	
 	@Inject
 	@FXMLLoader
 	FXMLLoaderFactory factory;
 	
-	@FXML TableView<CurrencyDistribution> table;
-	@FXML TableColumn<CurrencyDistribution,CurrencyDistribution> name;
-	@FXML TableColumn<CurrencyDistribution,CurrencyDistribution> value;
+	@FXML TableView<SectorDistribution> table;
+	@FXML TableColumn<SectorDistribution,SectorDistribution> name;
+	@FXML TableColumn<SectorDistribution,SectorDistribution> value;
 	
 	@Inject
 	IEclipseContext context;
@@ -59,27 +56,27 @@ public class CurrencyController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		TableUtil.setupColumn(name, "{0}", EMFProperties.value(FeaturePath.fromList(CURRENCY_DISTRIBUTION__CURRENCY,CURRENCY__NAME)));
-		TableUtil.setupColumn(value, "{0,number,#,##0.00}", EMFProperties.value(FeaturePath.fromList(CURRENCY_DISTRIBUTION__PERCENTAGE)));
-		table.setItems(AdapterFactory.<CurrencyDistribution>adapt(EMFProperties.list(FOND__CURRENCY_DISTRIBUTION_LIST).observeDetail(master)));
+		TableUtil.setupColumn(name, "{0}", EMFProperties.value(FeaturePath.fromList(SECTOR_DISTRIBUTION__SECTOR, SECTOR__NAME)));
+		TableUtil.setupColumn(value, "{0,number,#,##0.00}", EMFProperties.value(SECTOR_DISTRIBUTION__PERCENTAGE));
+		table.setItems(AdapterFactory.<SectorDistribution>adapt(EMFProperties.list(FOND__SECTOR_DISTRIBUTION_LIST).observeDetail(master)));
 		table.getSelectionModel().selectedItemProperty().addListener(new InvalidationListener() {
 			
 			@Override
 			public void invalidated(Observable observable) {
-				context.set(CurrencyDistribution.class, table.getSelectionModel().getSelectedItem());
+				context.set(SectorDistribution.class, table.getSelectionModel().getSelectedItem());
 			}
 		});
 	}
 
-	@FXML public void onAddCurrency() {
+	@FXML public void onAdd() {
 		Fond f = (Fond) master.getValue();
-		CurrencyDistribution c = MyfondFactory.eINSTANCE.createCurrencyDistribution();
-		f.getCurrencyDistributionList().add(c);
+		SectorDistribution c = MyfondFactory.eINSTANCE.createSectorDistribution();
+		f.getSectorDistributionList().add(c);
 		table.getSelectionModel().select(c);
-		onEditCurrency();
+		onEdit();
 	}
 
-	@FXML public void onEditCurrency() {
+	@FXML public void onEdit() {
 		Stage s = new Stage(StageStyle.TRANSPARENT);
 		
 		Window window = table.getScene().getWindow();
@@ -104,9 +101,9 @@ public class CurrencyController implements Initializable {
 		}
 	}
 
-	@FXML public void onRemoveCurrency() {
+	@FXML public void onRemove() {
 		Fond f = (Fond) master.getValue();
-		f.getCurrencyDistributionList().remove(table.getSelectionModel().getSelectedItem());
-		table.getSelectionModel().select(f.getCurrencyDistributionList().get(0));
+		f.getSectorDistributionList().remove(table.getSelectionModel().getSelectedItem());
+		table.getSelectionModel().select(f.getSectorDistributionList().get(0));
 	}
 }

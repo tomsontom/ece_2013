@@ -1,9 +1,6 @@
 package at.bestsolution.myfond.ui.fonds.controllers;
 
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.CURRENCY_DISTRIBUTION__CURRENCY;
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.CURRENCY_DISTRIBUTION__PERCENTAGE;
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.CURRENCY__NAME;
-import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.FOND__CURRENCY_DISTRIBUTION_LIST;
+import static at.bestsolution.myfond.model.myfond.MyfondPackage.Literals.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,20 +31,20 @@ import org.eclipse.fx.ui.databinding.TableUtil;
 import org.eclipse.fx.ui.di.FXMLLoader;
 import org.eclipse.fx.ui.di.FXMLLoaderFactory;
 
-import at.bestsolution.myfond.model.myfond.CurrencyDistribution;
+import at.bestsolution.myfond.model.myfond.CountryDistribution;
 import at.bestsolution.myfond.model.myfond.Fond;
 import at.bestsolution.myfond.model.myfond.MyfondFactory;
 
-public class CurrencyController implements Initializable {
+public class CountryController implements Initializable {
 	private WritableValue master = new WritableValue();
 	
 	@Inject
 	@FXMLLoader
 	FXMLLoaderFactory factory;
 	
-	@FXML TableView<CurrencyDistribution> table;
-	@FXML TableColumn<CurrencyDistribution,CurrencyDistribution> name;
-	@FXML TableColumn<CurrencyDistribution,CurrencyDistribution> value;
+	@FXML TableView<CountryDistribution> table;
+	@FXML TableColumn<CountryDistribution,CountryDistribution> name;
+	@FXML TableColumn<CountryDistribution,CountryDistribution> value;
 	
 	@Inject
 	IEclipseContext context;
@@ -59,27 +56,27 @@ public class CurrencyController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		TableUtil.setupColumn(name, "{0}", EMFProperties.value(FeaturePath.fromList(CURRENCY_DISTRIBUTION__CURRENCY,CURRENCY__NAME)));
-		TableUtil.setupColumn(value, "{0,number,#,##0.00}", EMFProperties.value(FeaturePath.fromList(CURRENCY_DISTRIBUTION__PERCENTAGE)));
-		table.setItems(AdapterFactory.<CurrencyDistribution>adapt(EMFProperties.list(FOND__CURRENCY_DISTRIBUTION_LIST).observeDetail(master)));
+		TableUtil.setupColumn(name, "{0}", EMFProperties.value(FeaturePath.fromList(COUNTRY_DISTRIBUTION__COUNTRY, COUNTRY__NAME)));
+		TableUtil.setupColumn(value, "{0,number,#,##0.00}", EMFProperties.value(COUNTRY_DISTRIBUTION__PERCENTAGE));
+		table.setItems(AdapterFactory.<CountryDistribution>adapt(EMFProperties.list(FOND__COUNTRY_DISTRIBUTION_LIST).observeDetail(master)));
 		table.getSelectionModel().selectedItemProperty().addListener(new InvalidationListener() {
 			
 			@Override
 			public void invalidated(Observable observable) {
-				context.set(CurrencyDistribution.class, table.getSelectionModel().getSelectedItem());
+				context.set(CountryDistribution.class, table.getSelectionModel().getSelectedItem());
 			}
 		});
 	}
 
-	@FXML public void onAddCurrency() {
+	@FXML public void onAdd() {
 		Fond f = (Fond) master.getValue();
-		CurrencyDistribution c = MyfondFactory.eINSTANCE.createCurrencyDistribution();
-		f.getCurrencyDistributionList().add(c);
+		CountryDistribution c = MyfondFactory.eINSTANCE.createCountryDistribution();
+		f.getCountryDistributionList().add(c);
 		table.getSelectionModel().select(c);
-		onEditCurrency();
+		onEdit();
 	}
 
-	@FXML public void onEditCurrency() {
+	@FXML public void onEdit() {
 		Stage s = new Stage(StageStyle.TRANSPARENT);
 		
 		Window window = table.getScene().getWindow();
@@ -104,9 +101,9 @@ public class CurrencyController implements Initializable {
 		}
 	}
 
-	@FXML public void onRemoveCurrency() {
+	@FXML public void onRemove() {
 		Fond f = (Fond) master.getValue();
-		f.getCurrencyDistributionList().remove(table.getSelectionModel().getSelectedItem());
-		table.getSelectionModel().select(f.getCurrencyDistributionList().get(0));
+		f.getCountryDistributionList().remove(table.getSelectionModel().getSelectedItem());
+		table.getSelectionModel().select(f.getCountryDistributionList().get(0));
 	}
 }

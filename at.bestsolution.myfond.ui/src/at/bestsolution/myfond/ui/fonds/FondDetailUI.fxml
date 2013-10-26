@@ -72,9 +72,21 @@
 					<fx:include source="/at/bestsolution/myfond/ui/fonds/CurrencyDetail.fxml" />
 				</content>
 			</Tab>
-			<Tab text="Assets" closable="false"/> 
-			<Tab text="Country" closable="false"/> 
-			<Tab text="Sector" closable="false"/> 
+			<Tab text="Assets" closable="false"> 
+				<content>
+					<fx:include source="/at/bestsolution/myfond/ui/fonds/AssetDetail.fxml" />
+				</content>
+			</Tab>
+			<Tab text="Country" closable="false"> 
+				<content>
+					<fx:include source="/at/bestsolution/myfond/ui/fonds/CountryDetail.fxml" />
+				</content>
+			</Tab>
+			<Tab text="Sector" closable="false"> 
+				<content>
+					<fx:include source="/at/bestsolution/myfond/ui/fonds/SectorDetail.fxml" />
+				</content>
+			</Tab>
 		</tabs>
 		<GridPane.margin>
 			<Insets top="10"/> 
