@@ -20,6 +20,9 @@
 
 <Card xmlns:fx="http://javafx.com/fxml" fx:controller="application.FondCardController">
 
+	<padding>
+		<Insets left="10" bottom="10" right="10" top="10"/> 
+	</padding>
 	<top>
 		<TitledPane fx:id="fontData" text="Fond ABC" collapsible="false"> 
 			<content>
@@ -67,7 +70,7 @@
 			<Region HBox.hgrow="ALWAYS"/> 
 			<StackPane id="currencyButton" onMouseClicked="#showCurrency"> 
 				<children>
-					<Button prefHeight="32" prefWidth="32" onAction="#showCurrency"> 
+					<Button fx:id="currencyPushButton" prefHeight="32" prefWidth="32" onAction="#showCurrency"> 
 						<clip>
 							<ImageView> 
 								<image>
@@ -80,7 +83,7 @@
 			</StackPane>
 			<StackPane id="assetButton" onMouseClicked="#showAsset"> 
 				<children>
-					<Button prefHeight="32" prefWidth="32" onAction="#showAsset"> 
+					<Button fx:id="assetPushButton" prefHeight="32" prefWidth="32" onAction="#showAsset"> 
 						<clip>
 							<ImageView> 
 								<image>
@@ -93,7 +96,7 @@
 			</StackPane>
 			<StackPane id="countryButton" onMouseClicked="#showCountry"> 
 				<children>
-					<Button prefHeight="32" prefWidth="32" onAction="#showCountry"> 
+					<Button fx:id="countryPushButton" prefHeight="32" prefWidth="32" onAction="#showCountry"> 
 						<clip>
 							<ImageView> 
 								<image>
@@ -106,7 +109,7 @@
 			</StackPane>
 			<StackPane id="sectorButton" onMouseClicked="#showSector"> 
 				<children>
-					<Button prefHeight="32" prefWidth="32" onAction="#showSector"> 
+					<Button fx:id="sectorPushButton" prefHeight="32" prefWidth="32" onAction="#showSector"> 
 						<clip>
 							<ImageView> 
 								<image>

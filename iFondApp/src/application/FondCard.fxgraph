@@ -20,6 +20,12 @@ import javafx.scene.layout.StackPane
 
 component FondCard controlledby FondCardController {
 	Card {
+		padding : Insets {
+			left : 10,
+			bottom : 10,
+			right : 10,
+			top : 10
+		},
 		top : TitledPane id fontData {
 			text : "Fond ABC",
 			collapsible : false,
@@ -109,7 +115,7 @@ component FondCard controlledby FondCardController {
 			StackPane {
 				^id: "currencyButton",
 				children : [
-					Button {
+					Button id currencyPushButton {
 						prefHeight : 32,
 						prefWidth : 32,
 						clip : ImageView {
@@ -125,7 +131,7 @@ component FondCard controlledby FondCardController {
 			StackPane {
 				^id : "assetButton",
 				children : [
-					Button {
+					Button id assetPushButton {
 						prefHeight : 32,
 						prefWidth : 32,
 						clip : ImageView {
@@ -141,7 +147,7 @@ component FondCard controlledby FondCardController {
 			StackPane {
 				^id : "countryButton",
 				children : [
-					Button {
+					Button id countryPushButton {
 						prefHeight : 32,
 						prefWidth : 32,
 						clip : ImageView {
@@ -157,7 +163,7 @@ component FondCard controlledby FondCardController {
 			StackPane {
 				^id : "sectorButton",
 				children : [
-					Button {
+					Button id sectorPushButton {
 						prefHeight : 32,
 						prefWidth : 32,
 						clip : ImageView {

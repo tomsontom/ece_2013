@@ -1,8 +1,12 @@
 package application;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
@@ -18,8 +22,9 @@ import org.eclipse.fx.ui.mobile.TransitionType;
 
 import application.model.DistributionValue;
 import application.model.Fond;
+import javafx.scene.control.Button;
 
-public class FondCardController {
+public class FondCardController implements Initializable {
 
 	@FXML Deck diagrammDeck;
 	
@@ -34,20 +39,48 @@ public class FondCardController {
 	@FXML Text description;
 	@FXML TitledPane fontData;
 
+	@FXML Button currencyPushButton;
+
+	@FXML Button assetPushButton;
+
+	@FXML Button countryPushButton;
+
+	@FXML Button sectorPushButton;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		currencyPushButton.getStyleClass().add("selectedButton");
+	}
+
 	@FXML public void showCurrency() {
 		diagrammDeck.moveTo("currency", TransitionType.SLIDE_RIGHT);
+		clearSelection();
+		currencyPushButton.getStyleClass().add("selectedButton");
 	}
 
 	@FXML public void showAsset() {
 		diagrammDeck.moveTo("asset", TransitionType.SLIDE_RIGHT);
+		clearSelection();
+		assetPushButton.getStyleClass().add("selectedButton");
 	}
 
 	@FXML public void showCountry() {
 		diagrammDeck.moveTo("country", TransitionType.SLIDE_RIGHT);
+		clearSelection();
+		countryPushButton.getStyleClass().add("selectedButton");
 	}
 
 	@FXML public void showSector() {
 		diagrammDeck.moveTo("sector", TransitionType.SLIDE_RIGHT);
+		clearSelection();
+		sectorPushButton.getStyleClass().add("selectedButton");
+	}
+	
+	private void clearSelection() {
+		currencyPushButton.getStyleClass().remove("selectedButton");
+		assetPushButton.getStyleClass().remove("selectedButton");
+		countryPushButton.getStyleClass().remove("selectedButton");
+		sectorPushButton.getStyleClass().remove("selectedButton");
 	}
 
 	public void setFond(Fond fond) {

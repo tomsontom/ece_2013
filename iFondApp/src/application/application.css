@@ -16,7 +16,7 @@
 }
 
 #currencyButton .button {
-	-fx-fill: white;
+	-fx-background-color: white;
 }
 
 #sectorButton {
@@ -37,7 +37,7 @@
 }
 
 #sectorButton .button {
-	-fx-fill: white;
+	-fx-background-color: white;
 }
 
 
@@ -59,7 +59,7 @@
 }
 
 #countryButton .button {
-	-fx-fill: white;
+	-fx-background-color: white;
 }
 
 #assetButton {
@@ -80,9 +80,25 @@
 }
 
 #assetButton .button {
-	-fx-fill: white;
+	-fx-background-color: white;
 }
 
 #iconbar {
     -fx-background-color: linear-gradient(#98a8bd 0%, #8195af 25%, #6d86a4 100%);
+}
+
+#currencyButton .button.selectedButton {
+	-fx-background-color: rgb(255,115,0);
+}
+
+#sectorButton .button.selectedButton {
+	-fx-background-color: rgb(255,115,0);
+}
+
+#countryButton .button.selectedButton {
+	-fx-background-color: rgb(255,115,0);
+}
+
+#assetButton .button.selectedButton {
+	-fx-background-color: rgb(255,115,0);
 }
