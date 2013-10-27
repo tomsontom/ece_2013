@@ -101,7 +101,7 @@
         country="//@countryList.5"/>
     <countryDistributionList
         percentage="16.2"
-        country="//@countryList.6"/>
+        country="//@countryList.12"/>
     <sectorDistributionList
         percentage="27.8"
         sector="//@sectorList.0"/>
@@ -122,7 +122,7 @@
         sector="//@sectorList.5"/>
     <sectorDistributionList
         percentage="21.2"
-        sector="//@sectorList.6"/>
+        sector="//@sectorList.7"/>
   </fondList>
   <fondList
       name="Raiffeisen-Europa-Aktien"
@@ -152,6 +152,8 @@
     <currencyDistributionList
         percentage="2.1"
         currency="//@currencyList.12"/>
+    <currencyDistributionList
+        currency="//@currencyList.6"/>
     <assetDistributionList
         percentage="95.1"
         asset="//@assetList.0"/>
@@ -161,6 +163,48 @@
     <assetDistributionList
         percentage="4.4"
         asset="//@assetList.3"/>
+    <countryDistributionList
+        percentage="23.9"
+        country="//@countryList.6"/>
+    <countryDistributionList
+        percentage="10.8"
+        country="//@countryList.7"/>
+    <countryDistributionList
+        percentage="9.8"
+        country="//@countryList.8"/>
+    <countryDistributionList
+        percentage="7.2"
+        country="//@countryList.9"/>
+    <countryDistributionList
+        percentage="7.0"
+        country="//@countryList.10"/>
+    <countryDistributionList
+        percentage="6.9"
+        country="//@countryList.11"/>
+    <countryDistributionList
+        percentage="34.4"
+        country="//@countryList.12"/>
+    <sectorDistributionList
+        percentage="18.1"
+        sector="//@sectorList.0"/>
+    <sectorDistributionList
+        percentage="13.5"
+        sector="//@sectorList.2"/>
+    <sectorDistributionList
+        percentage="12.9"
+        sector="//@sectorList.4"/>
+    <sectorDistributionList
+        percentage="11.9"
+        sector="//@sectorList.1"/>
+    <sectorDistributionList
+        percentage="11.2"
+        sector="//@sectorList.5"/>
+    <sectorDistributionList
+        percentage="9.6"
+        sector="//@sectorList.6"/>
+    <sectorDistributionList
+        percentage="22.8"
+        sector="//@sectorList.7"/>
   </fondList>
   <assetList
       name="Share"/>
@@ -183,6 +227,18 @@
   <countryList
       name="Thailand"/>
   <countryList
+      name="Great Britain"/>
+  <countryList
+      name="France"/>
+  <countryList
+      name="Germany"/>
+  <countryList
+      name="Finnland"/>
+  <countryList
+      name="Swiss"/>
+  <countryList
+      name="Netherlands"/>
+  <countryList
       name="Others"/>
   <sectorList
       name="Finance"/>
@@ -196,6 +252,8 @@
       name="Industry"/>
   <sectorList
       name="Not basic goods"/>
+  <sectorList
+      name="Healthcare"/>
   <sectorList
       name="Others"/>
 </myfond:MyFond>
