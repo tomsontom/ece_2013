@@ -1,0 +1,8 @@
+GridPane {
+	-fx-hgap: 10;
+	-fx-vgap: 10;
+}
+
+#currencyDetail {
+	-fx-padding: 10 10 10 10;
+}

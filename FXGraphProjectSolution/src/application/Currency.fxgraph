@@ -1,0 +1,58 @@
+package application
+
+import javafx.scene.layout.GridPane
+import application.SampleController
+import javafx.scene.control.Label
+import javafx.scene.control.TextField
+import javafx.scene.layout.BorderPane
+import javafx.scene.control.Button
+import javafx.geometry.Insets
+import javafx.scene.image.ImageView
+import javafx.scene.image.Image
+import javafx.scene.control.ComboBox
+import application.CountryController
+import javafx.scene.control.ListView
+import application.CurrencyController
+import javafx.scene.layout.HBox
+
+component Currency resourcefile "messages.properties" styledwith "application.css" controlledby CurrencyController {
+	BorderPane {
+		left : BorderPane {
+			center : ListView id currencyList,
+			bottom : HBox {
+				Button {
+					text : rstring "common.add",
+					onAction : controllermethod addCurrency
+				},
+				Button {
+					text : rstring "common.remove",
+					onAction : controllermethod removeCurrency
+				}
+			}
+		},
+		center : GridPane {
+			^id : "currencyDetail",
+			children : [
+				Label {
+					text : rstring "currency.name"
+				},
+				TextField id nameField {
+					preview text : "This will show the name",
+					static columnIndex : 1,
+					static hgrow : "ALWAYS"
+				},
+				Label {
+					text : rstring "currency.abbrev",
+					static rowIndex : 1
+					
+				},
+				TextField id abbreviationField {
+					preview text : "This will show the abbreviation",
+					static columnIndex : 1,
+					static rowIndex : 1,
+					static hgrow : "ALWAYS"
+				}
+			]
+		}
+	}
+}
