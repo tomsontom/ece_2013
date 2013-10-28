@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='2'>
+  <artifact classifier='osgi.bundle' id='e4.samplesolution.app' version='1.0.0.201310281107'>
+    <properties size='5'>
+      <property name='artifact.size' value='51281'/>
+      <property name='download.size' value='51281'/>
+      <property name='maven-groupId' value='e4.samplesolution'/>
+      <property name='maven-artifactId' value='e4.samplesolution.app'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+  <artifact classifier='osgi.bundle' id='e4.samplesolution.app.source' version='1.0.0.201310281107'>
+    <properties size='6'>
+      <property name='artifact.size' value='4077'/>
+      <property name='download.size' value='4077'/>
+      <property name='maven-groupId' value='e4.samplesolution'/>
+      <property name='maven-artifactId' value='e4.samplesolution.app'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-classifier' value='sources'/>
+    </properties>
+  </artifact>
+</artifacts>
