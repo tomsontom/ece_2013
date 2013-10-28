@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<extension id="application" point="org.eclipse.core.runtime.applications">
+	<application thread="any" cardinality="*" visible="true" >
+		<run class="org.eclipse.fx.ui.di.DIApplication" >
+			<parameter name="mainClass" value="osgi.samplesolution.app.MainApplication" />
+			
+		</run>
+		
+	</application>
+	
+</extension>
+<extension id="product" point="org.eclipse.core.runtime.products">
+	<product application="osgi.samplesolution.app.application" name="MyOSGiApp" >
+		<property name="appName" value="MyOSGiApp" />
+		
+	</product>
+	
+</extension>
+</plugin>

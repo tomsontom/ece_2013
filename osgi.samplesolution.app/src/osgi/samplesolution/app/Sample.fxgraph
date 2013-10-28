@@ -1,0 +1,14 @@
+package osgi.samplesolution.app
+
+import javafx.scene.layout.BorderPane
+import javafx.scene.control.Button
+import osgi.samplesolution.app.SampleController
+
+component Sample controlledby SampleController {
+	BorderPane {
+		center : Button id button {
+			text : "Hello World",
+			onAction : controllermethod run
+		}
+	}
+}
