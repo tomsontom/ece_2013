@@ -1,5 +1,9 @@
 package at.bestsolution.myfond.datasource.xmi;
 
+import java.io.IOException;
+
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -31,6 +35,17 @@ public class XMIDatasourceFactory implements DatasourceFactory {
 		@Override
 		public MyFond getRoot() {
 			return (MyFond) resource.getContents().get(0);
+		}
+		
+		@Override
+		public IStatus save() {
+			try {
+				resource.save(null);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return Status.OK_STATUS;
 		}
 	}
 }

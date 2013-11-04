@@ -1,9 +1,16 @@
 package at.bestsolution.myfond.datasource.cdo;
 
+import java.io.IOException;
+
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.cdo.net4j.CDONet4jSession;
 import org.eclipse.emf.cdo.net4j.CDONet4jSessionConfiguration;
 import org.eclipse.emf.cdo.net4j.CDONet4jUtil;
 import org.eclipse.emf.cdo.transaction.CDOTransaction;
+import org.eclipse.emf.cdo.util.CommitException;
+import org.eclipse.emf.cdo.util.ConcurrentAccessException;
+import org.eclipse.emf.cdo.view.CDOAdapterPolicy;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.net4j.Net4jUtil;
 import org.eclipse.net4j.connector.IConnector;
@@ -49,8 +56,28 @@ public class CDODatasourceFactory implements DatasourceFactory {
 			}
 			
 			transaction = session.openTransaction();
+			transaction.options().addChangeSubscriptionPolicy(CDOAdapterPolicy.ALL);
 			resource = transaction.getResource("MyFond");
 			return resource;
+		}
+		
+		@Override
+		public IStatus save() {
+			try {
+				resource.save(null);
+				transaction.commit();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ConcurrentAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (CommitException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			return Status.OK_STATUS;
 		}
 	}
 }

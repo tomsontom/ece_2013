@@ -25,10 +25,15 @@
       <children xsi:type="advanced:Perspective" xmi:id="_5uTBkDvzEeOeuuMOEShoag" elementId="at.bestsolution.myfond.app.perspective.basicdata"/>
     </children>
   </children>
+  <handlers xmi:id="_cXj9QEVYEeOmt4DYr8tjSQ" elementId="at.bestsolution.myfond.app.handler.0" contributionURI="bundleclass://at.bestsolution.myfond.app/at.bestsolution.myfond.app.SaveHandler" command="_aDtEQEVYEeOmt4DYr8tjSQ"/>
+  <bindingTables xmi:id="_wmqT0EVYEeOmt4DYr8tjSQ" elementId="at.bestsolution.myfond.app.bindingtable.0" bindingContext="_9N3AEDvwEeOeuuMOEShoag">
+    <bindings xmi:id="_yMdM8EVYEeOmt4DYr8tjSQ" elementId="at.bestsolution.myfond.app.keybinding.0" keySequence="M1+S" command="_aDtEQEVYEeOmt4DYr8tjSQ"/>
+  </bindingTables>
   <rootContext xmi:id="_9N3AEDvwEeOeuuMOEShoag" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_9N3AEjvwEeOeuuMOEShoag" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_9N3AEzvwEeOeuuMOEShoag" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
+  <commands xmi:id="_aDtEQEVYEeOmt4DYr8tjSQ" elementId="at.bestsolution.myfond.app.command.0" commandName="Save"/>
   <addons xmi:id="_9N3AFDvwEeOeuuMOEShoag" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_9N3AFTvwEeOeuuMOEShoag" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_9N3AFjvwEeOeuuMOEShoag" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
