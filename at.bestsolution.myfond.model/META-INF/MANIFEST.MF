@@ -11,5 +11,6 @@ Export-Package: at.bestsolution.myfond.model.myfond,
  at.bestsolution.myfond.model.myfond.impl,
  at.bestsolution.myfond.model.myfond.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.cdo;visibility:=reexport
 Bundle-ActivationPolicy: lazy

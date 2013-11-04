@@ -3,10 +3,8 @@
 package at.bestsolution.myfond.model.myfond;
 
 import java.util.Date;
-
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,9 +32,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see at.bestsolution.myfond.model.myfond.MyfondPackage#getFond()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Fond extends EObject {
+public interface Fond extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Currency Distribution List</b></em>' containment reference list.
 	 * The list contents are of type {@link at.bestsolution.myfond.model.myfond.CurrencyDistribution}.

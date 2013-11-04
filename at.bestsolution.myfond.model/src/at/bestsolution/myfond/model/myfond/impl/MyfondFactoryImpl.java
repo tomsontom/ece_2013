@@ -57,16 +57,16 @@ public class MyfondFactoryImpl extends EFactoryImpl implements MyfondFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case MyfondPackage.MY_FOND: return createMyFond();
-			case MyfondPackage.FOND: return createFond();
-			case MyfondPackage.CURRENCY_DISTRIBUTION: return createCurrencyDistribution();
-			case MyfondPackage.CURRENCY: return createCurrency();
-			case MyfondPackage.ASSET_DISTRIBUTION: return createAssetDistribution();
-			case MyfondPackage.ASSET: return createAsset();
-			case MyfondPackage.COUNTRY_DISTRIBUTION: return createCountryDistribution();
-			case MyfondPackage.COUNTRY: return createCountry();
-			case MyfondPackage.SECTOR_DISTRIBUTION: return createSectorDistribution();
-			case MyfondPackage.SECTOR: return createSector();
+			case MyfondPackage.MY_FOND: return (EObject)createMyFond();
+			case MyfondPackage.FOND: return (EObject)createFond();
+			case MyfondPackage.CURRENCY_DISTRIBUTION: return (EObject)createCurrencyDistribution();
+			case MyfondPackage.CURRENCY: return (EObject)createCurrency();
+			case MyfondPackage.ASSET_DISTRIBUTION: return (EObject)createAssetDistribution();
+			case MyfondPackage.ASSET: return (EObject)createAsset();
+			case MyfondPackage.COUNTRY_DISTRIBUTION: return (EObject)createCountryDistribution();
+			case MyfondPackage.COUNTRY: return (EObject)createCountry();
+			case MyfondPackage.SECTOR_DISTRIBUTION: return (EObject)createSectorDistribution();
+			case MyfondPackage.SECTOR: return (EObject)createSector();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

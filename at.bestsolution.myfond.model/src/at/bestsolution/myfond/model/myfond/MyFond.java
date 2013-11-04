@@ -2,9 +2,8 @@
  */
 package at.bestsolution.myfond.model.myfond;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,9 +23,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see at.bestsolution.myfond.model.myfond.MyfondPackage#getMyFond()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface MyFond extends EObject {
+public interface MyFond extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Currency List</b></em>' containment reference list.
 	 * The list contents are of type {@link at.bestsolution.myfond.model.myfond.Currency}.

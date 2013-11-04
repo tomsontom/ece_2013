@@ -2,7 +2,7 @@
  */
 package at.bestsolution.myfond.model.myfond;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,9 +19,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see at.bestsolution.myfond.model.myfond.MyfondPackage#getCurrency()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Currency extends EObject {
+public interface Currency extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
