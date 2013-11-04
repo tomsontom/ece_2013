@@ -1,5 +1,8 @@
 package application.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -106,5 +109,59 @@ public class Fond {
 	
 	public ObservableList<SectorDistributionValue> getSectorDistribution() {
 		return sectorDistribution;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if( obj == null ) {
+			return false;
+		}
+		
+		if( obj.getClass() == getClass() ) {
+			return getId().equals(((Fond) obj).getId());
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return getId().hashCode();
+	}
+	
+	public void merge(Fond f) {
+		setAssetFee(f.getAssetFee());
+		setDescription(f.getDescription());
+		setManagementFee(f.getManagementFee());
+		setName(f.getName());
+		setRisk(f.getRisk());
+		
+		mergeDistList(f.getAssetDistribution(),getAssetDistribution());
+		mergeDistList(f.getCountryDistribution(),getCountryDistribution());
+		mergeDistList(f.getCurrencyDistribution(),getCurrencyDistribution());
+		mergeDistList(f.getSectorDistribution(),getSectorDistribution());
+	}
+	
+	private static <D extends DistributionValue> void  mergeDistList(List<D> source, List<D> target) {
+		List<D> copy = new ArrayList<D>(target);
+		
+		for( D d : source ) {
+			if( ! merge(target,d) ) {
+				target.add(d);
+			}
+			copy.remove(d);
+		}
+		
+		target.removeAll(copy);
+	}
+	
+	private static <D extends DistributionValue> boolean merge(List<D> target, D merge) {
+		for( D t : target ) {
+			if( t.getName().equals(merge.getName()) ) {
+//				System.err.println("SETTING NEW PERCENTAGE: " + merge.getPercentage());
+				t.setPercentage(merge.getPercentage());
+				return true;
+			}
+		}
+		return false;
 	}
 }

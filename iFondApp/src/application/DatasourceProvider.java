@@ -2,10 +2,14 @@ package application;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -22,12 +26,78 @@ import application.model.SectorDistributionValue;
 
 public class DatasourceProvider {
 	private ObservableList<Fond> fonds = FXCollections.observableArrayList();
+	private static final String HOST = "192.168.1.101";
+//	private static final String HOST = "localhost";
 	
 	public DatasourceProvider() {
-		fonds.addAll(convert(getClass().getClassLoader().getResourceAsStream("dummy.json")));		
+		try {
+			URL url = new URL("http://"+HOST+":8080/myfonddata");
+			fonds.addAll(convert(url.openStream()));
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		fonds.addAll(convert(getClass().getClassLoader().getResourceAsStream("dummy.json")));
+		
+		Timer t = new Timer(true);
+		t.scheduleAtFixedRate(new UpdateTask(fonds), 10*1000, 10*1000);
+		
 	}
 	
-	private List<Fond> convert(InputStream in) {
+	static class UpdateTask extends TimerTask {
+		private final ObservableList<Fond> fonds;
+		
+		public UpdateTask(ObservableList<Fond> fonds) {
+			this.fonds = fonds;
+		}
+		
+		@Override
+		public void run() {
+			try {
+				System.err.println("UPDATING ....");
+				URL url = new URL("http://"+HOST+":8080/myfonddata");
+				final List<Fond> newFonds = convert(url.openStream());
+				final List<Fond> copy = new ArrayList<>(fonds);
+				final List<Fond> targetList = fonds;
+				Platform.runLater(new Runnable() {
+					
+					@Override
+					public void run() {
+						for( Fond f : newFonds ) {
+							if( ! merge(f) ) {
+								targetList.add(f);
+							}
+							copy.remove(f);
+						}
+						
+						targetList.removeAll(copy);
+					}
+				});
+				
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		private boolean merge(Fond merge) {
+			for( Fond f : fonds ) {
+				if( f.equals(merge) ) {
+					f.merge(merge);
+					return true;
+				}
+			}
+			return false;
+		}
+	}
+	
+	private static List<Fond> convert(InputStream in) {
 		List<Fond> rv = new ArrayList<>();
 		try {
 			StringBuffer b = new StringBuffer();

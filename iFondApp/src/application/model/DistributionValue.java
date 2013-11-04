@@ -32,4 +32,17 @@ public abstract class DistributionValue {
 	public DoubleProperty percentageProperty() {
 		return this.percentage;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if( obj.getClass() == getClass() ) {
+			return getName().equals(((DistributionValue)obj).getName());
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return getName().hashCode();
+	}
 }
