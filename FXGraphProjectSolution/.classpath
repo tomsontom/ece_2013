@@ -3,15 +3,17 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.emf.common_2.9.1.v20130827-0309.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.emf.ecore_2.9.1.v20130827-0309.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
 	<classpathentry kind="lib" path="libs/at.bestsolution.myfond.model_0.1.0.201310272123.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.core.databinding_1.4.1.v20130515-1857.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.core.databinding.observable_1.4.1.v20130515-1857.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.core.databinding.property_1.4.200.v20130515-1857.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.emf.databinding_1.3.0.v20130902-0605.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.fx.core.databinding_0.9.0.201310260602.jar"/>
-	<classpathentry kind="lib" path="libs/org.eclipse.fx.ui.databinding_0.9.0.201310260602.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.core.databinding_1.4.1.v20140214-0004.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.core.databinding.beans_1.2.200.v20140214-0004.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.core.databinding.observable_1.4.1.v20140210-1835.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.core.databinding.property_1.4.200.v20140214-0004.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.emf.common_2.10.0.v20140117-0813.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.emf.databinding_1.3.0.v20140127-0448.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.emf.databinding.edit_1.3.0.v20140127-0448.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.emf.ecore_2.10.0.v20140117-0813.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.fx.ui.databinding_1.0.0.201403100602.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.fx.core.databinding_1.0.0.201403100602.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
