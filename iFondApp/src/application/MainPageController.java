@@ -14,6 +14,7 @@ import javafx.scene.control.ListView;
 import javafx.util.Callback;
 
 import org.eclipse.fx.core.fxml.ExtendedFXMLLoader;
+import org.eclipse.fx.core.fxml.ExtendedFXMLLoader.Data;
 import org.eclipse.fx.ui.mobile.Card;
 import org.eclipse.fx.ui.mobile.Deck;
 import org.eclipse.fx.ui.mobile.TransitionType;
@@ -61,10 +62,10 @@ public class MainPageController implements Initializable {
 				}
 				
 				try {
-					ExtendedFXMLLoader f = new ExtendedFXMLLoader();
-					Card c = f.load(getClass().getClassLoader(), "application/FondCard.fxml");
+					Data<Card, FondCardController> data = ExtendedFXMLLoader.loadWithController(getClass().getClassLoader(), null, null, "application/FondCard.fxml");
+					Card c = data.getNode();
 					c.setName(fond.getId());
-					FondCardController controller = f.getController();
+					FondCardController controller = data.getController();
 					controller.setFond(fond);
 					fondDeck.getCards().add(c);
 					fondDeck.moveTo(fond.getId(), TransitionType.FADE);
